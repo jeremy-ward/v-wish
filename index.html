@@ -1,0 +1,22 @@
+<!DOCTYPE  html>
+<html ng-app="mainApp">
+<head>
+  <title>Virginia's Wish</title>
+</head>
+<body ng-controller="mainController">
+  <form ng-submit="sendEmail()">
+    <input type="text" placeholder = "Name"ng-model="email.name"/>
+    <input type="email" placeholder = "Email" ng-model="email.email"/>
+    <button type='submit'>Add Me</button>
+  </form>
+
+  <button ng-click="getEmail()">Get Email</button>
+
+  <form ng-submit="deleteOne()">
+    <input type="number" placeholder="docID" ng-model='delete.id'/>
+    <button type = 'submit'>Delete</button>
+  </form>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script type="text/javascript" src="client/javascript/app.js"></script>
+</body>
+</html>
