@@ -1,5 +1,5 @@
 <?php
-  include ('../database/dbConns.php');
+  include ('../database/dbConfig.php');
   include ('../database/dbMethods.php');
 
   $postdata   = file_get_contents("php://input");

@@ -38,4 +38,16 @@ angular.module("mainApp", [])
         console.log(response);
       });
   };
+  $scope.testMe = function(){
+    console.log('testing');
+    $http({
+      method: 'GET',
+      url: 'server/test.php'
+    })
+    .then(function(response){
+      console.log(response);
+    });
+  };
+
+  
 }]);
