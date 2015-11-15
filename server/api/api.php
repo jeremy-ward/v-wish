@@ -3,7 +3,7 @@
 
   $request = $_SERVER['REQUEST_METHOD'];
   if($request!="GET"){
-    $reqParams    = json_decode(file_get_contents("php://input"));
+    $reqParams = json_decode(file_get_contents('php://input'), true);
   }else{
     parse_str($_SERVER['QUERY_STRING'], $reqParams);
   }

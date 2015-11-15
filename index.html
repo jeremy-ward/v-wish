@@ -2,23 +2,20 @@
 <html ng-app="mainApp">
 <head>
   <title>Virginia's Wish</title>
+  <meta charset="utf-8">
+  <!-- <base href="/"> -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/paper/bootstrap.min.css" rel="stylesheet" integrity="sha256-hMIwZV8FylgKjXnmRI2YY0HLnozYr7Cuo1JvRtzmPWs= sha512-k+wW4K+gHODPy/0gaAMUNmCItIunOZ+PeLW7iZwkDZH/wMaTrSJTt7zK6TGy6p+rnDBghAxdvu1LX2Ohg0ypDw==" crossorigin="anonymous">
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
+  <script type="text/javascript" src="client/javascript/app.js"></script>
+  <script type="text/javascript" src="client/javascript/controllers/controller.js"></script>
+  <script type="text/javascript" src="client/javascript/directives/directives.js"></script>
 </head>
-<body ng-controller="mainController">
-  <form ng-submit="sendEmail()">
-    <input type="text" placeholder = "Name"ng-model="email.name"/>
-    <input type="email" placeholder = "Email" ng-model="email.email"/>
-    <button type='submit'>Add Me</button>
-  </form>
+<body>
+  <nav-bar></nav-bar> 
+  <div ng-view></div>
 
-  <button ng-click="getEmail()">Get Email</button>
-
-  <form ng-submit="">
-    <input type="number" placeholder="docID" ng-model='delete.id'/>
-    <button ng-click="findOne()">Find</button>
-    <button ng-click="deleteOne()">Delete</button>
-  </form>
-  
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-<script type="text/javascript" src="client/javascript/app.js"></script>
-</body>
+  </body>
 </html>
