@@ -1,4 +1,3 @@
-
 angular.module("mainApp", ['ngRoute'])
   .config([ '$routeProvider', '$locationProvider', 
     function($routeProvider, $locationProvider){
@@ -32,3 +31,6 @@ angular.module("mainApp", ['ngRoute'])
           });
         }//*/
   }]);
+
+require('./directives/directives');
+require('./controllers/controller');
