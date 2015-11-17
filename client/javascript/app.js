@@ -33,4 +33,4 @@ angular.module("mainApp", ['ngRoute'])
   }]);
 
 require('./directives/directives');
-require('./controllers/controller');
+require('./controllers/homeController');

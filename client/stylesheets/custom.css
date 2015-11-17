@@ -1,0 +1,31 @@
+nav .container-fluid {
+  background-color: rgba(255, 255, 255, 0.3) !important; }
+
+.jumbotron {
+  margin: 0;
+  background-image: url(http://i.istockimg.com/image-zoom/66184659/3/380/266/stock-photo-66184659-african-kids-ghana.jpg);
+  background-size: cover;
+  height: 600px; }
+  .jumbotron .container {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white !important; }
+
+#email-div {
+  background-image: url(http://thumb7.shutterstock.com/display_pic_with_logo/743638/134989679/stock-photo-cute-himba-boy-portrait-namibia-134989679.jpg);
+  background-size: cover;
+  height: 500px; }
+  #email-div .container-fluid {
+    padding: 30px;
+    background-color: #0D6CFF;
+    opacity: .6;
+    height: 500px; }
+
+.panel, .panel-heading {
+  border-radius: 10px; }
+
+.info-div {
+  margin-top: 20px;
+  padding: 5px; }
+  .info-div a {
+    text-decoration: none;
+    color: black; }

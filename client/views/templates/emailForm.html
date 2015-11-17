@@ -1,22 +1,24 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4 col-sm-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4>Join Us</h4>
-        </div>
-        <div class="panel-body">
-          <form ng-submit="submitEmail()">
-            <div class="form-group">
-              <label for="inputName">Name</label>
-              <input type="text" class="form-control" id="inputName" placeholder="Name" ng-model="user.name">
-            </div>
-            <div class="form-group">
-              <label for="inputEmail">Email address</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email" ng-model="user.email">
-            </div>
-            <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#emailModal">Join</button>
-          </form>
+<div class="" id="email-div">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>Join Us</h4>
+          </div>
+          <div class="panel-body">
+            <form ng-submit="submitEmail()">
+              <div class="form-group">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Name" ng-model="user.name">
+              </div>
+              <div class="form-group">
+                <label for="inputEmail">Email address</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email" ng-model="user.email">
+              </div>
+              <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#emailModal">Join</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

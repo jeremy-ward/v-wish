@@ -1,5 +1,5 @@
 angular.module("mainApp")
-  .directive('navBar', function(){
+  .directive('navBar', function($location){
     return{
       restrict : "E",
       templateUrl: "client/views/templates/nav.html",
@@ -17,8 +17,8 @@ angular.module("mainApp")
           name: 'Blog',
           link: "#/blog"
         }];
-        scope.setActive=function(name){
-          scope.activeLink = name;
+        scope.getActive=function(){
+          return "#"+$location.path();
         };
       }
     };
@@ -39,5 +39,11 @@ angular.module("mainApp")
     return{
       restrict: "E",
       templateUrl: 'client/views/templates/emailModal.html'
+    };
+  })
+  .directive('infoDiv', function(){
+    return{
+      restrict: "E",
+      templateUrl: 'client/views/templates/infoDiv.html'
     };
   });

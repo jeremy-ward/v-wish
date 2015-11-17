@@ -18,4 +18,21 @@ angular.module('mainApp')
       });
     $scope.user={};
   };
+
+  $scope.infoSections=[
+    {
+      title: 'Events',
+      info : 'Checkout our upcoming events',
+      link: "#/events"
+    },{
+      title: 'About Us',
+      info : "Learn more about the purpose, mission and people of Virginia's Wish",
+      link: "#/about"
+    },{
+      title: 'Blog',
+      info : "Read about the difference we are making together",
+      link: "#/blog"
+    }
+  ];
+
 }]);

@@ -1,10 +1,17 @@
-<div class="contiainer-fluid">
-  <div class="jumbotron">
-     <div class="container">
-      <h1>Virginia's Wish</h1>
-      <p>Fun with a purpose</p>       
-     </div> 
-  </div>
+<div class="jumbotron">
+   <div class="container">
+    <h1>Virginia's Wish</h1>
+    <p>Fun with a purpose</p>       
+   </div> 
 </div>
 <email-form></email-form>
-<email-modal></email-modal>
+
+<div class="container" id="info-secton">
+  <div class="row">
+    <div ng-repeat="section in infoSections">
+      <info-div></info-div>
+    </div>
+  </div>
+
+  <email-modal></email-modal>
+</div>

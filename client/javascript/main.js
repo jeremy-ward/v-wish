@@ -34,8 +34,8 @@ angular.module("mainApp", ['ngRoute'])
   }]);
 
 require('./directives/directives');
-require('./controllers/controller');
-},{"./controllers/controller":2,"./directives/directives":3}],2:[function(require,module,exports){
+require('./controllers/homeController');
+},{"./controllers/homeController":2,"./directives/directives":3}],2:[function(require,module,exports){
 angular.module('mainApp')
 .controller('homeController',["$http", '$scope', function($http, $scope){
   $scope.submitEmail=function(){
@@ -56,10 +56,27 @@ angular.module('mainApp')
       });
     $scope.user={};
   };
+
+  $scope.infoSections=[
+    {
+      title: 'Events',
+      info : 'Checkout our upcoming events',
+      link: "#/events"
+    },{
+      title: 'About Us',
+      info : "Learn more about the purpose, mission and people of Virginia's Wish",
+      link: "#/about"
+    },{
+      title: 'Blog',
+      info : "Read about the difference we are making together",
+      link: "#/blog"
+    }
+  ];
+
 }]);
 },{}],3:[function(require,module,exports){
 angular.module("mainApp")
-  .directive('navBar', function(){
+  .directive('navBar', function($location){
     return{
       restrict : "E",
       templateUrl: "client/views/templates/nav.html",
@@ -77,8 +94,8 @@ angular.module("mainApp")
           name: 'Blog',
           link: "#/blog"
         }];
-        scope.setActive=function(name){
-          scope.activeLink = name;
+        scope.getActive=function(){
+          return "#"+$location.path();
         };
       }
     };
@@ -99,6 +116,12 @@ angular.module("mainApp")
     return{
       restrict: "E",
       templateUrl: 'client/views/templates/emailModal.html'
+    };
+  })
+  .directive('infoDiv', function(){
+    return{
+      restrict: "E",
+      templateUrl: 'client/views/templates/infoDiv.html'
     };
   });
 },{}]},{},[1]);

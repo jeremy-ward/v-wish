@@ -9,10 +9,9 @@ gulp
     return gutil.log('Gulp is Running');
   })
   .task('build-css', function(){
-    gutil.log('Compiled SCSS to CSS');
-    return gulp.src('./client/scss/**/*.scss')
+    return gulp.src('./client/stylesheets/scss/**/*.scss')
       .pipe(sass())
-      .pipe(gulp.dest('client/css'));
+      .pipe(gulp.dest('client/stylesheets'));
       
   })
   .task('browserify', function(){
@@ -22,5 +21,5 @@ gulp
       .pipe(gulp.dest('./client/javascript/'));
   });
 
-  gulp.watch('client/javascript/app.js', ['browserify']);
-  gulp.watch('client/scss/**/*.scss', ['build-css']);
+  gulp.watch('client/javascript/**/*.js', ['browserify']);
+  gulp.watch('client/stylesheets/scss/**/*.scss', ['build-css']);
